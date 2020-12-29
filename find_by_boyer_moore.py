@@ -16,6 +16,9 @@ class FindByBoyerMoore:
         pattern_string_length = len(pattern_string)
         input_string_length = len(self.input_string)
 
+        if pattern_string_length == 0:
+            return result
+
         shift_dictionary = self.build_shift_dictionary(pattern_string, pattern_string_length)
 
         i = 0

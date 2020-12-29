@@ -14,6 +14,14 @@ class Test(unittest.TestCase):
         self.assertEqual(input_string.search("help"), [30])
         self.assertEqual(input_string.search("long"), [4])
 
+    def test_empty_string(self):
+        input_string = FindByBoyerMoore("")
+        self.assertEqual(input_string.search("Christmas"), [])
+
+    def test_empty_substring(self):
+        input_string = FindByBoyerMoore("Save")
+        self.assertEqual(input_string.search(""), [])
+
 
 if __name__ == '__main__':
     unittest.main()
